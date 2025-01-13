@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  airso-folder-db:
+    container_name: airso-folder-db
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: airso
+      POSTGRES_PASSWORD: pass123
+  airso-file-db:
+    container_name: airso-file-db
+    image: postgres
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: airso
+      POSTGRES_PASSWORD: pass123
+  nats:
+    image: nats:latest
+    ports:
+      - '4222:4222'
+      - '8222:8222'
+    command:
+      - '-user'
+      - 'digibay'
+      - '-pass'
+      - 'pass123'

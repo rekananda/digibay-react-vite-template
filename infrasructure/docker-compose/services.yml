@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  admin-web:
+    container_name: admin-web
+    build:
+      context: ../../
+      # target: production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.admin-web.entrypoints=web"
+      - "traefik.http.routers.admin-web.rule=Host(`admin.digibay.id`)"
+      - "traefik.http.routers.admin-web.service=admin-web"
+      # - "traefik.http.routers.admin-web.tls=true"
+      # - "traefik.http.routers.admin-web.tls.certresolver=production"
+      - "traefik.http.services.admin-web.loadbalancer.server.port=5173"
+      - "traefik.docker.network=traefik"
+    networks:
+      - "traefik"
+      - ${GLOBAL_NETWORK:-services}

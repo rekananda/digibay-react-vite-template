@@ -1,0 +1,7 @@
+version: "3.7"
+
+networks:
+  admin:
+    external: true
+  traefik:
+    external: true
