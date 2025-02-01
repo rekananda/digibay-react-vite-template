@@ -1,0 +1,147 @@
+body {
+  --mantine-color-text: light-dark(var(--mantine-color-dark-6), var(--mantine-color-white));
+  --mantine-color-solid: light-dark(rgb(255, 255, 255),rgb(26, 27, 31)) !important;
+  --mantine-color-body: light-dark(rgba(255, 255, 255, 0.2), rgba(26, 27, 31, 0.2)) !important;
+  --mantine-background-card: light-dark(rgba(255, 255, 255, 0.3), rgba(26, 27, 31, 0.3)) !important;
+  --text-color: var(--mantine-color-text);
+  --icon-color-default: var(--mantine-color-text);
+}
+
+.mantine-NavLink-label {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+}
+
+.mantine-ScrollArea-viewport > div > .mantine-Grid-root > .mantine-Grid-inner {
+  width: 100% !important;
+}
+
+.mantine-AppShell-root {
+  min-height: 100dvh;
+  position: relative;
+  &:before {
+    content: "";
+    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-7));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(@/assets/images/background.jpg);
+    background-size: cover;
+    filter: blur(2px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0.25;
+    z-index: -1;
+  }
+}
+
+.mantine-AppShell-main {
+  min-height: max-content !important;
+}
+
+.mantine-AppShell-navbar {
+  @mixin smaller-than($mantine-breakpoint-sm) {
+    background-color: var(--mantine-color-solid) !important;
+  }
+}
+
+.mantine-Menu-dropdown {
+  background-color: transparent !important;
+  position: relative;
+  &:before {
+    content: "";
+    background-color: light-dark(rgba(255, 255, 255, 0.6), rgba(26, 27, 31, 0.6)) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+}
+
+.mantine-InputWrapper-description,
+.mantine-InputWrapper-error {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-1));
+}
+
+.mantine-Badge-label {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 14px !important;
+}
+
+.mantine-InputWrapper-description {
+  color: var(--mantine-color-gray-6) !important;
+}
+
+.mantine-InputWrapper-error {
+  color: red !important;
+}
+
+.mantine-Modal-root {
+  --mantine-color-body: light-dark(#fff, var(--mantine-color-dark-4)) !important;
+  --mantine-background-card: light-dark(#fff, var(--mantine-color-dark-4)) !important;
+}
+
+.mantine-Progress-section {
+  &:first-of-type {
+    border-start-start-radius: var(--progress-radius) !important;
+    border-end-start-radius: var(--progress-radius) !important;
+  }
+
+  &:last-of-type {
+    border-start-end-radius: var(--progress-radius) !important;
+    border-end-end-radius: var(--progress-radius) !important;
+  }
+}
+.mantine-Modal-header:has(.mantine-Modal-title) {
+  /* border-bottom: solid 1px var(--mantine-color-gray-6); */
+  padding-inline: 24px;
+  padding-block: 24px;
+  padding-bottom: 0px;
+  margin-bottom: 12px;
+}
+
+.mantine-Modal-body {
+  padding-inline: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.mantine-Modal-body:has(.footerContainer) {
+  padding-bottom: 0 !important;
+}
+
+.box-dropzone-image {
+  background: #ffffffbf;
+  border-radius: 8px;
+  border: 1px;
+  box-shadow: 0px 0px 24px 0px #00000029;
+  -webkit-box-shadow: 0px 0px 24px 0px #00000029;
+  -moz-box-shadow: 0px 0px 24px 0px #00000029;
+}
+
+.mantine-Input-input {
+  background-color: var(--mantine-color-body) !important;
+}
+
+.mantine-Dropzone-root {
+  background-color: var(--mantine-color-body) !important;
+  border-style: dashed !important;
+  border-width: medium !important;
+
+  .mantine-Dropzone-inner .scroll-dropzone > div {
+    justify-content: center;
+  }
+}
+
+.mantine-InputWrapper-label {
+  display: flex !important;
+  gap: 2px;
+}
+

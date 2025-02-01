@@ -1,0 +1,103 @@
+.glassmorp {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar {
+  right: 0;
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--mantine-color-gray-6);
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.tabler-icon {
+  color: var(--icon-color-default);
+}
+button .tabler-icon {
+  color: var(--button-color, --icon-color-default);
+}
+
+.recharts-tooltip-wrapper {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.mrt-table-paper.mantine-Paper-root {
+  --mrt-base-background-color: var(--mantine-background-card) !important;
+}
+.mrt-table-paper thead,
+.mrt-table-paper tbody {
+  --mrt-base-background-color: var(--mantine-color-solid) !important;
+}
+
+/* .hide-pill .mantine-MultiSelect-pill{
+  display: none !important;
+} */
+
+/* .outside-pill {
+  background-color: var(--mantine-color-neutral-3) !important;
+  color: var(--mantine-color-neutral-7) !important;
+} */
+
+/* .box-dropzone-file {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} */
+
+/* .mantine-Dropzone-root.custom-image-dropzone {
+  border: none !important;
+  background: none !important;
+
+  .mantine-Dropzone-inner .scroll-dropzone > div {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .box-dropzone-image {
+    border: 1px solid var(--mantine-color-gray-6);
+    background: #ffffffbf;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 24px 0px #00000029;
+    -webkit-box-shadow: 0px 0px 24px 0px #00000029;
+    -moz-box-shadow: 0px 0px 24px 0px #00000029;
+  }
+
+  .box-dropzone-image.active {
+    border: medium solid var(--mantine-color-primary-6) !important;
+  }
+
+  .custom-image-dropzone-action {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      background-color: var(--mantine-color-body);
+      align-items: center;
+    }
+
+    button {
+      color: var(--mantine-color-dark-6);
+    }
+    button:hover {
+      color: var(--mantine-color-white);
+      background-color: var(--mantine-color-primary-3);
+    }
+  }
+} */
+

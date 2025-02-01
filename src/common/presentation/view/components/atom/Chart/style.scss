@@ -1,0 +1,47 @@
+.custom-donut-chart,
+.custom-donut-chart-rounded,
+.custom-chart-line,
+.custom-gauge-chart {
+  position: relative;
+}
+
+.custom-donut-chart .recharts-pie {
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: center;
+}
+
+.custom-donut-chart::before,
+.custom-donut-chart-rounded::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  border-radius: 50%;
+  background-color: light-dark(var(--mantine-color-white),var(--mantine-color-gray-7));
+  box-shadow: light-dark(0 0 15px -6px rgba(0, 0, 0, 0.77),0 0 15px -6px rgba(255, 255, 255, 0.77));
+  -webkit-box-shadow: light-dark(0 0 15px -6px rgba(0, 0, 0, 0.77),0 0 15px -6px rgba(255, 255, 255, 0.77));
+  -moz-box-shadow: light-dark(0 0 15px -6px rgba(0, 0, 0, 0.77),0 0 15px -6px rgba(255, 255, 255, 0.77));
+}
+
+.custom-gauge-chart .mantine-DonutChart-label,
+.custom-donut-chart .mantine-DonutChart-label,
+.custom-donut-chart-rounded .mantine-RingProgress-label {
+  font-weight: "Nunito";
+  font-size: var(--label-size, 22px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.custom-donut-chart::before {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+}
+
+.custom-chart-line > .mantine-Text-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

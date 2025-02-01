@@ -20,7 +20,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@Hooks/*": ["src/common/presentation/view-model/hooks/*"],
+      "@Styles/*": ["src/common/presentation/view/styles/*"],
+      "@Utils/*": ["src/common/presentation/view-model/utils/*"],
+      "@Atom/*": ["src/common/presentation/view/components/atom/*"],
+      "@Molecule/*": ["src/common/presentation/view/components/molecule/*"],
+      "@Organisme/*": ["src/common/presentation/view/components/organisme/*"],
+    },
   },
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
